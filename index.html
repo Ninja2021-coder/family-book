@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <center>
+        <img style="width: 30%;" id="family_member_image" src="https://thumbs.dreamstime.com/b/cartoon-happy-family-sketch-illustration-54299736.jpg">
+        <h4 id="family_member_name"></h4>
+        <br>
+        <button style="width: 10%;" onclick="update();">Next</button>
+        </center>
+        <script>
+            var images=["https://thumbs.dreamstime.com/b/cartoon-happy-family-sketch-illustration-54299736.jpg", "https://www.how-to-draw-funny-cartoons.com/image-files/cartoon-dad-005.jpg", "https://previews.123rf.com/images/djvstock/djvstock1807/djvstock180719805/114964492-cartoon-mom-icon-over-white-background-vector-illustration.jpg",
+             "https://thumbs.dreamstime.com/b/cute-boy-cartoon-illustration-86419835.jpg"];
+            
+            var names=["Family Book", "Dad", "Mom", "ME"];
+
+            var i=0;
+            function update(){
+                i++;
+                var number_of_fam_members_in_array=3
+                if(i>number_of_fam_members_in_array){
+                    i=0;
+                }
+                var updatedName=names[i]
+                var updatedImage=images[i]
+                document.getElementById("family_member_image").src=updatedImage;
+                document.getElementById("family_member_name").innerHTML=updatedName;
+            }
+        </script>
+    </body>
+</html>
